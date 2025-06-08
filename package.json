@@ -1,0 +1,25 @@
+{
+  "name": "docker-bun-practice",
+  "module": "src/index.ts",
+  "type": "module",
+  "private": true,
+  "author": "kavinda",
+  "license": "MIT",
+  "version": "1.0.0",
+  "description": "A practice project for Docker and Bun",
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "dev": "bun run --watch src/index.ts",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/express": "^5.0.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
