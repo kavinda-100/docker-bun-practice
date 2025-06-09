@@ -10,11 +10,11 @@ COPY package.json .
 # Copy Bun Lock file
 COPY bun.lock .
 
-# Copy the source code
-COPY . .
-
 # Install dependencies
 RUN bun install
+
+# Copy the source code
+COPY . .
 
 # Expose the port
 EXPOSE 5000

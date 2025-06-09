@@ -6,7 +6,7 @@ const PORT = Bun.env.PORT || 5000;
 // home route
 app.get('/', (req: Request, res: Response) => {
     console.log(`Bun Environment Variable PORT: ${PORT}`);
-  res.send('Hello, World with Bun! 🌍 🌍');
+  res.send('Hello, World with Bun! 🌍');
 });
 
 // health check route
