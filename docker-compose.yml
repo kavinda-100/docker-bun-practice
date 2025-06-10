@@ -7,8 +7,14 @@ services:
     environment:
       - PORT=5000
       - NODE_ENV=development
-      - CHOKIDAR_USEPOLLING=true
-    volumes:
-      - .:/app
-      - /app/node_modules
     container_name: backend-bun-container
+    command: bun run dev
+    develop:
+      watch:
+        - action: sync
+          path: ./
+          target: /app/
+          ignore:
+            - node_modules/
+        - action: rebuild
+          path: package.json
